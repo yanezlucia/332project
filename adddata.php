@@ -1,5 +1,5 @@
 <?php
-    require_once "conn.php"; // Change the file name to match your connection file
+    require_once "conn.php"; 
     
     if(isset($_POST['submit'])){
 
@@ -14,7 +14,7 @@
             $sql = "INSERT INTO books (isbn, title, author, publisher, num_copies, genre) 
                     VALUES ('$isbn', '$title', '$author', '$publisher', $num_copies, '$genre')";
             if (mysqli_query($conn, $sql)) {
-                header("location: index.php"); // Redirect to index.php after successful insertion
+                header("location: index.php"); 
             } else {
                 echo "Something went wrong. Please try again later.";
             }
