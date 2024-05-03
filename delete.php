@@ -1,6 +1,6 @@
 <?php
-    require_once "connect.php"; // Change the file name to match your connection file
-    $isbn = $_GET["isbn"]; // Assuming the parameter name is 'isbn'
+    require_once "conn.php"; 
+    $isbn = $_GET["isbn"]; 
     $query = "DELETE FROM books WHERE isbn = '$isbn'";
     if (mysqli_query($conn, $query)) {
         header("location: index.php");
